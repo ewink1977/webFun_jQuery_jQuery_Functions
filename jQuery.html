@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>jQuery Functions Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log("Document Loaded");
+
+                $("button.demo1").click(function() {
+                    $("p.demo-p1").hide();
+                });
+
+                $("button.demo2").click(function() {
+                    alert("You have pushed a button and triggered the .click function!");
+                });
+
+                $("button.demo3").click(function() {
+                    $("p.demo-p1").show();
+                });
+
+                $("button.demo4").click(function() {
+                    $("p.demo-p4").toggle();
+                });
+
+                $("button.demo5").click(function() {
+                    $("div.demo-div5").slideDown( "slow" );
+                });
+
+                $("button.demo6").click(function() {
+                    $("div.demo-div6").slideUp( "slow" );
+                });
+
+                $("button.demo7").click(function() {
+                    $("div.demo-div7").slideToggle( "800" );
+                });
+
+                $("button.demo8").click(function() {
+                    $("div.demo-div8").fadeIn( "slow" );
+                });
+
+                $("button.demo9").click(function() {
+                    $("div.demo-div9").fadeOut( "1000" );
+                });
+
+                $("button.demo10").click(function() {
+                    $("p.demo-p10").addClass( "bg-primary" );
+                });
+
+                $("button.demo11").click(function() {
+                    $("p.demo-p11").before(`<div class="bg-danger" style="width: 100%; height: 25px;"></div>`);
+                });
+
+                $("button.demo12").click(function() {
+                    $("p.demo-p12").after(`<div class="bg-primary" style="width: 100%; height: 15px;"></div>`);
+                });
+
+                $("button.demo13").click(function() {
+                    $("p.demo-p13").append(`<img src="img/pika.png" alt="?" style="display: inline; width: 25px;">`);
+                });
+
+                $("button.demo14").click(function() {
+                    $("p.demo-p14").html(`<p class="text-dark demo-p14">I'm sure there are many great uses for this, though I can't think of any off the top of my head...</p>`);
+                });
+
+                var title15 = $("p.demo-p15").attr("title");
+                    $("span.demo-p15a").text( title15 );
+
+                $("button.demo16").click(function() {
+                    var text16 = $(this).text();
+                    $("input.input16").val(text16);
+                });
+
+                
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-dark text-center">My jQuery Function Demonstration!</h1>
+        <br>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo1">.hide</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.hide</h2>
+                <p class="text-dark demo-p1">Click the button to the left to make this paragraph DISAPPEAR!!!!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo2">.click</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.click</h2>
+                <p class="text-dark">Click the button to the left and get an alert telling you that you clicked the button!!!!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo3">.show</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.show</h2>
+                <p class="text-dark">Hey, remember that paragraph you hid in the first box? Well click the button to the left to bring it back from purgatory!!!!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo4">.toggle</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.toggle</h2>
+                <p class="text-dark demo-p4">Wouldn't it be cool if we could toggle between paragraphs! Click the button to the left!</p>
+                <p class="text-dark demo-p4" style="display: none">I told you it would be cool! Yippie!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo5">.slideDown</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.slideDown</h2>
+                <p class="text-dark">Click the button to the left to add a box via .slideDown!</p>
+                <div class="demo-div5 bg-warning" style="height: 100px; width: 100px; display: none;"></div><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo6">.slideUp</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.slideUp</h2>
+                <p class="text-dark">Same thing that we did above, only this time we're going to make the box .slideUp! Also it's blue(ish).</p>
+                <div class="demo-div6 bg-info" style="height: 100px; width: 100px;"></div><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo7">.slideToggle</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.slideToggle</h2>
+                <p class="text-dark">Are you sad that once you slideUp or slideDown you can't undo? Don't be because we have .slideToggle!!!!!!</p>
+                <div class="demo-div7 bg-light" style="height: 100px; width: 75%;"></div><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo8">.fadeIn</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.fadeIn</h2>
+                <p class="text-dark">Sliding in and out is kind of the website version of a star wipe, so let's be classy and fade in!</p>
+                <div class="demo-div8 bg-light" style="width: 100%; display: none;">
+                    <p class="text-dark text-center">Fade in makes things look really cool, huh?</p>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo9">.fadeOut</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.fadeOut</h2>
+                <p class="text-dark">Amazingly, just like we were able to fadeIn, we can also fadeOut!</p>
+                <div class="demo-div9 bg-light" style="width: 100%;">
+                    <p class="text-dark text-center">So long cruel world!</p>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo10">.addClass</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.addClass</h2>
+                <p class="text-dark demo-p10">In this demonstration, we are going to have you click on the button to the left which will add a background color to this paragraph, via the .addClass function!!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo11">.before</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.before</h2>
+                <p class="text-dark demo-p11">For this demontration, if all goes well we will insert an empty DIV with a red background before each paragraph!</p>
+                <p class="text-dark demo-p11">We have two paragraphs here to make sure things are working right! Click the button to activate!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo12">.after</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.after</h2>
+                <p class="text-dark demo-p12">For this demontration, we're going to do the same as above, only insert our DIVs AFTER the paragraphs!</p>
+                <p class="text-dark demo-p12">I even changed up the look of the DIVs to 'prove' I didn't just copy and paste. Click the button to activate!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo13">.append</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.append</h2>
+                <p class="text-dark demo-p13">For this demontration, we are going to do some appending! That means we will be adding HTML to the end of our P tags.</p>
+                <p class="text-dark demo-p13">To make things even more complicated for myself, I'm not just going to be adding some text, I am going to be adding a Pikachu icon at the end!</p>
+                <p class="text-dark demo-p13">I hope this works! Pika-piiiiii!!!!!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo14">.html</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.html</h2>
+                <p class="text-dark demo-p14">By clicking the button on the left, you can change the HTML in this paragraph tag.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo15">.attr</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.attr</h2>
+                <p class="text-dark demo-p15" title="My Paragraph">Clicking on the button won't do anything here. I have just titled this paragraph and used the one below it to display the attr!</p>
+                <p class="text-dark">This paragraph tells you that <span class="demo-p15a" style="font-weight: bold;"></span> is the previous paragraph's title!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo16">.val</button>
+                <button type="button" class="btn btn-danger btn-lg btn-block demo16">is very</button>
+                <button type="button" class="btn btn-danger btn-lg btn-block demo16">useful!</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.val</h2>
+                <p class="text-dark">Click on the buttons to the left to change the value of what is in the input box below!</p>
+                <input class="input16" type="text" value="Click the buttons!">
+            </div>
+        </div>
+        <br>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+</body>
+</html>
