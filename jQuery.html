@@ -75,7 +75,9 @@
                     $("input.input16").val(text16);
                 });
 
-                
+                $("button.demo17").click(function() {
+                    $("p.demo-p17").text( `This is a new paragraph! What's <b>amazing</p> is that you can see the .text function doesn't care at all about your HTML markup! lol <a href="#">this is not a link!</a>`);
+                });
         });
     </script>
 </head>
@@ -245,6 +247,15 @@
                 <h2 class="text-dark">.val</h2>
                 <p class="text-dark">Click on the buttons to the left to change the value of what is in the input box below!</p>
                 <input class="input16" type="text" value="Click the buttons!">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-light shadow-sm rounded">
+                <button type="button" class="btn btn-danger btn-lg btn-block demo17">.text</button>
+            </div>
+            <div class="col-9 bg-success shadow-sm rounded">
+                <h2 class="text-dark">.text</h2>
+                <p class="text-dark demo-p17">Click on the button to the left to change this paragraph into something new!</p>
             </div>
         </div>
         <br>
